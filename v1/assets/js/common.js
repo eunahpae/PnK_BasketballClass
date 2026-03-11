@@ -50,7 +50,7 @@ function renderHeader() {
       <div class="header-inner">
         <a href="${ROOT}index.html" class="header-logo">
           <div class="logo-icon">🏀</div>
-          전문농구교실
+          배경한과 김보미의 농구교실
         </a>
         <nav class="header-nav">${navHTML}</nav>
         <a href="${ROOT}apply/" class="btn btn-primary btn-sm header-cta">수강 신청</a>
