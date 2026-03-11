@@ -34,9 +34,9 @@ const CLASS_DATA = [
 ];
 
 const COACHES_DATA = [
-  { name: '김민준 코치', role: '헤드 코치 · 가드 전문', emoji: '🧑', career: '前 실업팀 선수 / 지도 경력 8년', available: '월·화·수·목·금 10:00~15:00' },
-  { name: '이서연 코치', role: '포워드 · 체력 트레이닝', emoji: '👩', career: '대학 농구부 출신 / 유소년 전문', available: '화·목·토 13:00~18:00' },
-  { name: '박동현 코치', role: '센터 · 수비 전문', emoji: '🧔', career: 'KBL 2군 출신 / 수비 집중 지도', available: '월·수·금 14:00~19:00' },
+  { name: '배경한 코치', role: '헤드 코치 · 가드 전문', emoji: '🧑', career: 'KBL 1군 출신 / 지도 경력 10년', available: '월·화·수·목·금 10:00~15:00' },
+  { name: '김보미 코치', role: '포워드 · 체력 트레이닝', emoji: '👩', career: '前 실업팀 선수 / 유소년 전문', available: '화·목·토 13:00~18:00' },
+  { name: '배지안 코치', role: '센터 · 수비 전문', emoji: '🧔', career: 'KBL 2군 출신 / 수비 집중 지도', available: '월·수·금 14:00~19:00' },
 ];
 
 const CAMP_DATA = [
