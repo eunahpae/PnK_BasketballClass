@@ -18,9 +18,7 @@ function getActivePath() {
 
 // ── 루트 경로 계산 ──
 function getRootPath() {
-  // 절대경로로 고정
-  // 서브디렉토리 배포라면 '/' 대신 '/서브디렉토리명/' 으로 변경
-  return '/';
+  return '/PnK_BasketballClass/v1/';
 }
 
 const ROOT = getRootPath();
