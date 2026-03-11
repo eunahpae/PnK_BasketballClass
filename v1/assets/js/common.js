@@ -18,15 +18,9 @@ function getActivePath() {
 
 // ── 루트 경로 계산 ──
 function getRootPath() {
-  const parts = currentPath.split('/').filter(Boolean);
-
-  if (currentPath.includes('/admin')) return '../';
-
-  // 홈(루트)이면 ./
-  if (parts.length === 0) return './';
-
-  // 하위 페이지면 ../
-  return '../';
+  // 절대경로로 고정
+  // 서브디렉토리 배포라면 '/' 대신 '/서브디렉토리명/' 으로 변경
+  return '/';
 }
 
 const ROOT = getRootPath();
