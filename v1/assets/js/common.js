@@ -18,9 +18,15 @@ function getActivePath() {
 
 // ── 루트 경로 계산 ──
 function getRootPath() {
-  const depth = currentPath.split('/').filter(Boolean).length;
+  const parts = currentPath.split('/').filter(Boolean);
+
   if (currentPath.includes('/admin')) return '../';
-  return depth >= 1 && !currentPath.endsWith('/') ? '../' : './';
+
+  // 홈(루트)이면 ./
+  if (parts.length === 0) return './';
+
+  // 하위 페이지면 ../
+  return '../';
 }
 
 const ROOT = getRootPath();
