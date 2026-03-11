@@ -10,8 +10,8 @@ function getActivePath() {
   if (currentPath.includes('/apply')) return 'apply';
   if (currentPath.includes('/gallery')) return 'gallery';
   if (currentPath.includes('/notice')) return 'notice';
-  if (currentPath.includes('/inquiry')) return 'inquiry';
-  if (currentPath.includes('/basketball-info')) return 'basketball-info';
+  // if (currentPath.includes('/inquiry')) return 'inquiry';
+  // if (currentPath.includes('/basketball-info')) return 'basketball-info';
   if (currentPath.includes('/admin')) return 'admin';
   return 'home';
 }
@@ -31,8 +31,8 @@ function renderHeader() {
     { key: 'apply', label: '수강 신청', href: `${ROOT}apply/` },
     { key: 'gallery', label: '갤러리', href: `${ROOT}gallery/` },
     { key: 'notice', label: '공지사항', href: `${ROOT}notice/` },
-    { key: 'inquiry', label: '문의 게시판', href: `${ROOT}inquiry/` },
-    { key: 'basketball-info', label: '농구 정보', href: `${ROOT}basketball-info/` },
+    // { key: 'inquiry', label: '문의 게시판', href: `${ROOT}inquiry/` },
+    // { key: 'basketball-info', label: '농구 정보', href: `${ROOT}basketball-info/` },
   ];
 
   const navHTML = navItems.map(item => `
@@ -73,8 +73,8 @@ function renderFooter() {
       <div class="footer-inner">
         <div class="footer-top">
           <div class="footer-brand">
-            <div class="footer-logo">🏀 전문농구교실</div>
-            <p>초등~고등 수강생을 위한<br>전문 농구 교육 프로그램을 운영합니다.<br>문의: 010-0000-0000</p>
+            <div class="footer-logo">🏀 배경한과 김보미의 전문농구교실</div>
+            <p>초등~고등 수강생을 위한<br>전문 농구 교육 프로그램을 운영합니다.<br>문의: 010-9115-1905</p>
           </div>
           <div class="footer-col">
             <h4>빠른 메뉴</h4>
@@ -88,8 +88,8 @@ function renderFooter() {
           <div class="footer-col">
             <h4>고객 지원</h4>
             <ul>
-              <li><a href="${ROOT}inquiry/">1:1 문의</a></li>
-              <li><a href="${ROOT}basketball-info/">농구 정보</a></li>
+              // <li><a href="${ROOT}inquiry/">1:1 문의</a></li>
+              // <li><a href="${ROOT}basketball-info/">농구 정보</a></li>
               <li><a href="${ROOT}admin/">관리자</a></li>
             </ul>
           </div>
