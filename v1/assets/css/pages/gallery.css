@@ -1,0 +1,64 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.g-item {
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: var(--gray-200);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 40px;
+  transition: transform var(--transition);
+}
+.g-item:hover { transform: scale(1.02); }
+.g-item:hover .g-overlay { opacity: 1; }
+.g-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: white; opacity: 0;
+  transition: opacity var(--transition);
+  gap: 4px;
+}
+.g-overlay .g-label { font-size: var(--font-size-xs); background: var(--primary); padding: 2px 8px; border-radius: var(--radius-full); }
+.g-overlay .g-caption { font-size: var(--font-size-xs); text-align: center; padding: 0 8px; }
+
+/* 라이트박스 */
+.lightbox-inner {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  padding: 32px;
+  text-align: center;
+}
+.lightbox-close {
+  position: absolute; top: 12px; right: 12px;
+  width: 32px; height: 32px;
+  background: var(--gray-200); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; cursor: pointer; border: none;
+}
+.lightbox-img { font-size: 100px; padding: 32px 0; background: var(--gray-100); border-radius: var(--radius-md); }
+.lightbox-caption { margin-top: 16px; font-size: var(--font-size-sm); color: var(--gray-700); }
+.lightbox-nav { display: flex; gap: 12px; justify-content: center; margin-top: 16px; }
+.lightbox-nav button {
+  padding: 8px 20px;
+  background: var(--gray-200);
+  border: none; border-radius: var(--radius-sm);
+  cursor: pointer; font-size: 16px;
+  transition: background var(--transition);
+}
+.lightbox-nav button:hover { background: var(--primary); color: white; }
+
+@media (max-width: 768px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}

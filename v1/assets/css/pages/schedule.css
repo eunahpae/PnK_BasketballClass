@@ -1,0 +1,115 @@
+.schedule-info {
+  background: var(--primary-bg);
+  border-left: 4px solid var(--primary);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  color: var(--gray-700);
+  margin-bottom: 24px;
+}
+.schedule-table-wrap { overflow-x: auto; }
+.schedule-table {
+  width: 100%; border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+.schedule-table th {
+  background: var(--navy);
+  color: var(--white);
+  padding: 12px 16px;
+  text-align: center;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.schedule-table td {
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray-200);
+  vertical-align: middle;
+}
+.schedule-table tr:hover td { background: var(--gray-100); }
+.schedule-table .class-name { font-weight: 700; color: var(--navy); text-align: left; }
+.schedule-table .seats-full { color: var(--danger); font-weight: 700; }
+.schedule-table .seats-ok { color: var(--success); font-weight: 700; }
+.detail-btn {
+  padding: 4px 12px;
+  background: var(--primary-bg);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.detail-btn:hover { background: var(--primary); color: var(--white); }
+
+/* 개인레슨 */
+.coaches-lesson-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+.lesson-card {
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+  text-align: center;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.lesson-card:hover { border-color: var(--primary); box-shadow: var(--shadow-md); }
+.lesson-avatar { font-size: 52px; margin-bottom: 12px; }
+.lesson-name { font-size: var(--font-size-lg); font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.lesson-role { font-size: var(--font-size-sm); color: var(--primary); font-weight: 600; margin-bottom: 12px; }
+.lesson-career { font-size: var(--font-size-sm); color: var(--gray-600); line-height: 1.7; margin-bottom: 16px; }
+.lesson-available {
+  background: var(--primary-bg);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: var(--font-size-xs);
+  color: var(--gray-700);
+  margin-bottom: 16px;
+}
+
+/* 특강/캠프 */
+.camp-list { display: grid; gap: 16px; }
+.camp-card {
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.camp-card:hover { border-color: var(--primary); box-shadow: var(--shadow-sm); }
+.camp-dday {
+  background: var(--primary);
+  color: var(--white);
+  border-radius: var(--radius-md);
+  width: 60px; height: 60px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.camp-dday .d { font-size: var(--font-size-xs); }
+.camp-dday .num { font-size: var(--font-size-xl); line-height: 1; }
+.camp-info h3 { font-size: var(--font-size-base); font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.camp-info p { font-size: var(--font-size-sm); color: var(--gray-600); }
+.camp-actions { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
+
+/* 모달 내부 */
+.modal-detail-row { display: flex; gap: 12px; margin-bottom: 12px; font-size: var(--font-size-sm); }
+.modal-detail-row .label { color: var(--gray-500); flex-shrink: 0; width: 80px; }
+.modal-detail-row .value { color: var(--gray-800); font-weight: 600; }
+.curriculum-list { margin-top: 16px; }
+.curriculum-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: var(--font-size-sm);
+  color: var(--gray-700);
+  display: flex; align-items: center; gap: 8px;
+}
+.curriculum-list li::before { content: '✓'; color: var(--primary); font-weight: 700; }
+
+@media (max-width: 768px) {
+  .coaches-lesson-grid { grid-template-columns: 1fr; }
+  .camp-card { grid-template-columns: auto 1fr; }
+  .camp-actions { grid-column: span 2; flex-direction: row; }
+}

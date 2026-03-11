@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전문농구교실 — 농구의 시작과 성장</title>
+  <meta name="description" content="초등~고등학생을 위한 전문 농구 교실. 정규반, 개인레슨, 특강 등 다양한 프로그램을 운영합니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/home.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <!-- 히어로 섹션 -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="badge badge-primary hero-badge">🏀 2026년 신규 수강생 모집 중</span>
+          <h1 class="hero-title">농구의 <em>시작</em>과<br><em>성장</em>을 함께합니다</h1>
+          <p class="hero-desc">초등~고등학생을 위한 체계적인 농구 교육<br>전문 코치진과 함께하는 실력 향상 프로그램</p>
+          <div class="hero-actions">
+            <a href="apply/" class="btn btn-primary btn-lg">수강 신청하기</a>
+            <a href="schedule/" class="btn btn-outline-navy btn-lg">시간표 보기</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <strong>200+</strong>
+              <span>누적 수강생</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <strong>5+</strong>
+              <span>전문 코치</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <strong>3개</strong>
+              <span>정규 프로그램</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-img-wrap">
+            <div class="hero-img-placeholder">🏀</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 빠른 접근 메뉴 -->
+    <section class="quick-menu">
+      <div class="container">
+        <div class="quick-grid">
+          <a href="schedule/" class="quick-item">
+            <div class="quick-icon" style="background:#FFF4EB;">📅</div>
+            <span>시간표 보기</span>
+          </a>
+          <a href="apply/" class="quick-item">
+            <div class="quick-icon" style="background:#EBF0FF;">✍️</div>
+            <span>수강 신청</span>
+          </a>
+          <a href="schedule/#lesson" class="quick-item">
+            <div class="quick-icon" style="background:#EBFAF0;">🏃</div>
+            <span>개인레슨</span>
+          </a>
+          <a href="schedule/#camp" class="quick-item">
+            <div class="quick-icon" style="background:#FFF0F5;">🏆</div>
+            <span>특강·캠프</span>
+          </a>
+          <a href="inquiry/" class="quick-item">
+            <div class="quick-icon" style="background:#F0F8FF;">💬</div>
+            <span>문의하기</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 최신 공지사항 -->
+    <section class="section-notice">
+      <div class="container">
+        <div class="notice-header">
+          <div>
+            <h2 class="section-title">공지사항</h2>
+            <p class="section-subtitle">최신 소식을 확인하세요</p>
+          </div>
+          <a href="notice/" class="btn btn-outline btn-sm">전체 보기</a>
+        </div>
+        <div class="notice-list" id="homeNoticeList">
+          <!-- JS 렌더링 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 코치 소개 -->
+    <section class="section-coaches">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">코치 소개</h2>
+          <p class="section-subtitle">경험 많은 전문 코치진이 함께합니다</p>
+        </div>
+        <div class="coaches-grid" id="coachesGrid">
+          <!-- JS 렌더링 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 갤러리 하이라이트 -->
+    <section class="section-gallery">
+      <div class="container">
+        <div class="notice-header">
+          <div>
+            <h2 class="section-title">수업 현장</h2>
+            <p class="section-subtitle">생생한 수업 분위기를 만나보세요</p>
+          </div>
+          <a href="gallery/" class="btn btn-outline btn-sm">갤러리 전체보기</a>
+        </div>
+        <div class="gallery-highlight" id="galleryHighlight">
+          <!-- JS 렌더링 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA 배너 -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-inner">
+          <div class="cta-text">
+            <h2>지금 바로 시작하세요!</h2>
+            <p>수강 신청부터 첫 수업까지, 언제든지 문의해 주세요.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="apply/" class="btn btn-primary btn-lg">수강 신청하기</a>
+            <a href="inquiry/" class="btn btn-outline btn-lg" style="border-color:white;color:white;">문의하기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/pages/home.js"></script>
+</body>
+</html>

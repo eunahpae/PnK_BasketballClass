@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수업 안내 — 전문농구교실</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages/schedule.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="../">홈</a><span>›</span><span>수업 안내</span></div>
+        <h1>수업 안내</h1>
+        <p>정규반 · 개인레슨 · 특강/캠프 프로그램을 안내합니다</p>
+      </div>
+    </section>
+    <div class="container">
+      <div class="tab-wrap">
+        <button class="tab-item active" data-tab="regular">📅 정규반 시간표</button>
+        <button class="tab-item" data-tab="lesson">🏃 개인레슨</button>
+        <button class="tab-item" data-tab="camp" id="camp">🏆 특강·캠프·대회</button>
+      </div>
+
+      <!-- 정규반 -->
+      <div id="tab-regular" class="tab-content">
+        <div class="schedule-info">
+          <p>💡 잔여석이 <span class="tag-closed">마감</span>인 반은 대기자 등록이 가능합니다.</p>
+        </div>
+        <div class="schedule-table-wrap">
+          <table class="schedule-table" id="scheduleTable"></table>
+        </div>
+      </div>
+
+      <!-- 개인레슨 -->
+      <div id="tab-lesson" class="tab-content" style="display:none">
+        <div class="coaches-lesson-grid" id="lessonCoachGrid"></div>
+      </div>
+
+      <!-- 특강/캠프 -->
+      <div id="tab-camp" class="tab-content" style="display:none">
+        <div class="camp-list" id="campList"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 반별 상세 모달 -->
+  <div class="modal-overlay" id="classModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">반 상세 안내</h3>
+        <button class="modal-close" onclick="Utils.closeModal('classModal')">✕</button>
+      </div>
+      <div id="modalBody"></div>
+      <div style="margin-top:24px">
+        <a href="../apply/" class="btn btn-primary btn-full" id="modalApplyBtn">이 반 신청하기</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/pages/schedule.js"></script>
+</body>
+</html>

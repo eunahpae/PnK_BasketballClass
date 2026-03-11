@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>갤러리 — 전문농구교실</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/pages/gallery.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="../">홈</a><span>›</span><span>갤러리</span></div>
+        <h1>갤러리</h1>
+        <p>수업 현장의 생생한 사진과 영상을 확인하세요</p>
+      </div>
+    </section>
+    <div class="container">
+      <div class="tab-wrap" id="galleryTabs">
+        <button class="tab-item active" data-cat="all">전체</button>
+        <button class="tab-item" data-cat="regular">정규수업</button>
+        <button class="tab-item" data-cat="special">특강</button>
+        <button class="tab-item" data-cat="tournament">대회</button>
+        <button class="tab-item" data-cat="etc">기타</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <div class="pagination" id="galleryPager"></div>
+    </div>
+  </main>
+
+  <!-- 라이트박스 -->
+  <div class="modal-overlay" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="Utils.closeModal('lightbox')">✕</button>
+      <div class="lightbox-img" id="lightboxImg"></div>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <div class="lightbox-nav">
+        <button onclick="lightboxNav(-1)">◀</button>
+        <button onclick="lightboxNav(1)">▶</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/pages/gallery.js"></script>
+</body>
+</html>
